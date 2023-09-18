@@ -1,0 +1,16 @@
+
+
+/* Styles for zooming in */
+.zoomed-in {
+    transform: scale(1.2); /* Adjust the scale factor as needed for desired zoom level */
+    transition: transform 0.3s ease-in-out;
+    cursor: zoom-out; /* Set the cursor to indicate that the image can be zoomed out */
+  }
+  
+  /* Styles for zooming out (optional) */
+  .zoomed-out {
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+    cursor: zoom-in; /* Set the cursor to indicate that the image can be zoomed in */
+  }
+  

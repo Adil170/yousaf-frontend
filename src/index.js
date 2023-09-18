@@ -3,11 +3,29 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter } from "react-router-dom";
+import { configureStore } from "@reduxjs/toolkit";
+import cartReducer from '../src/slices/cartSlice'
+import { ToastContainer} from 'react-toastify';
+import { Provider } from "react-redux";
+
+const store = configureStore({
+  reducer : {
+    cart : cartReducer
+  }
+ })
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  
   <React.StrictMode>
+    <Provider store={store}> 
+    <BrowserRouter>
+    <ToastContainer />
     <App />
+  </BrowserRouter>
+  </Provider>
+
   </React.StrictMode>
 );
 
