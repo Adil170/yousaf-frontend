@@ -5,6 +5,7 @@ import Products from './components/Products';
 import ProductDetail from './screens/ProductDetail';
 import Cart from './screens/Cart';
 import Checkout from './screens/Checkout';
+import ContactUs from './screens/ContactUs';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Route path='/cart' element={<Cart/>} />
       
       <Route path='/Checkout' element={<Checkout/>} />
+      <Route path='/contectus' element={<ContactUs/>} />
       
 
       

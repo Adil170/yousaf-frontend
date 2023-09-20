@@ -6,12 +6,14 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from "react-router-dom";
 import { configureStore } from "@reduxjs/toolkit";
 import cartReducer from '../src/slices/cartSlice'
+import productReducer from './slices/productSlice'
 import { ToastContainer} from 'react-toastify';
 import { Provider } from "react-redux";
 
 const store = configureStore({
   reducer : {
-    cart : cartReducer
+    cart : cartReducer,
+    products : productReducer
   }
  })
 

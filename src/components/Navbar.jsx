@@ -59,6 +59,9 @@ function Navbar() {
             <Link to="/products" className="text-white hover:bg-gray-700 px-3 py-2 rounded-md font-bold">
               Products
             </Link>
+            <Link to="/contectus" className="text-white hover:bg-gray-700 px-3 py-2 rounded-md font-bold">
+              Contect Us
+            </Link>
             <Link to="/cart" className="text-white hover:bg-gray-700 px-3 py-2 rounded-md font-bold">
             <AiOutlineShoppingCart className='text-3xl'/>
             </Link>
@@ -77,6 +80,9 @@ function Navbar() {
             </Link>
             <Link to="/products" className="text-white block px-3 py-2 rounded-md hover:bg-gray-700 font-bold">
               Products
+            </Link>
+            <Link to="/contectus" className="text-white block px-3 py-2 rounded-md hover:bg-gray-700 font-bold">
+              Contect Us
             </Link>
             {/* Add more mobile menu links as needed */}
           </div>

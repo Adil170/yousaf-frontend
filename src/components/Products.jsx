@@ -1,15 +1,23 @@
 // Products.js
-import React ,{useState}from 'react';
+import React ,{useState , useEffect}from 'react';
 import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 import { productsData } from '../components/constents';
 import Navbar from './Navbar';
+import Footer from './Footer'
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 
 
+
+
+
 function Products() {
+// useEffect(() => {
+
+// } ,[])
+
   const [category , setCategory] =useState(productsData)  
   const filterResult =(curItem)=> { 
   const result = productsData.filter((curData) => {
@@ -32,6 +40,8 @@ function Products() {
   return (
     <>
       <Navbar />
+    
+     
       <div className="category-slider ">
         <Slider {...settings}>
 
@@ -45,7 +55,7 @@ function Products() {
         </Slider>
 
       </div>
-      <h2 className='flex justify-center text-3xl font-semibold  mt-2'>Our Latest Products</h2>
+      <h2 className='flex justify-center text-3xl font-semibold  mt-10'>Our Latest Products</h2>
       <div className="container mx-auto lg:max-w-full p-2 mt-10">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {category.map((product) => (
@@ -64,7 +74,9 @@ function Products() {
             </div>
           ))}
         </div>
+      
       </div>
+    {/* <Footer /> */}
     </>
   );
 }

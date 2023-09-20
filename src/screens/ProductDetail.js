@@ -5,6 +5,8 @@ import Navbar from '../components/Navbar';
 import './ProductDetail.css';
 import { addToCart } from '../slices/cartSlice';
 import { useDispatch } from 'react-redux';
+import  {Link} from 'react-router-dom'
+
 
 function ProductDetail() {
     const dispatch = useDispatch()
@@ -19,6 +21,7 @@ function ProductDetail() {
         };
  
         dispatch(addToCart(selectedProduct));
+     
       }
   const { productId } = useParams(); // Extract the productId from route parameters
 
@@ -111,12 +114,12 @@ function ProductDetail() {
 
             {/* Add more product details here */}
             <div className="mt-4">
-              <button onClick={() => handleAddToCart(product)} className="bg-gray-700 hover:bg-gray-950 text-white font-bold py-2 px-4 rounded">
+              <Link to='/cart'>
+              <button onClick={() => handleAddToCart(product)} className="flex bg-gray-700 hover:bg-gray-950 text-white font-bold py-3  px-9  justify-around lg:px-32 rounded mt-10">
                 Add to Cart
               </button>
-              <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ml-2">
-                Order Now
-              </button>
+              </Link>
+              
             </div>
           </div>
         </div>

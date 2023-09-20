@@ -45,7 +45,8 @@ function Cart() {
                                         />
                                         <div>
                                             <h2 className="text-lg font-semibold">{item.name}</h2>
-                                            <p>Price: ${item.price}</p>
+                                            <p>Price: Rs.{item.price }</p>
+                                            <p>Total Price: Rs.{item.price * item.cartQuantity}</p>
                                         </div>
                                     </div>
                                     <div className="flex items-center">

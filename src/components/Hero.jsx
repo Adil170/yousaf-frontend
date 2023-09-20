@@ -48,6 +48,7 @@ function Hero() {
         <p className="legend">Googlels</p>
       </div>
     </Carousel>
+   
     </div>
 
     </>
